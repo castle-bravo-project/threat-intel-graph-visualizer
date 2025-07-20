@@ -1,0 +1,6 @@
+{
+  "name": "Threat Intel Graph Visualizer",
+  "description": "An interactive map that displays threat intelligence data (like MISP reports), animating the connections between entities, and provides an AI-powered analysis of the threat landscape.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

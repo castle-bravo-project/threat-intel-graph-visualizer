@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-t-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Threat Intel Graph Visualizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <style>
+      @media print {
+        body {
+          background-color: white !important;
+        }
+        .print\:hidden {
+          display: none !important;
+        }
+        .print\:p-0 { padding: 0 !important; }
+        .print\:shadow-none { box-shadow: none !important; }
+        .print\:m-0 { margin: 0 !important; }
+        .print\:max-w-full { max-width: 100% !important; }
+        @page {
+          margin: 0.75in;
+        }
+      }
+      .arc-path-animated {
+        stroke-dasharray: 4, 6;
+        stroke-linecap: round;
+        animation: dash-flow 2s linear infinite;
+      }
+      @keyframes dash-flow {
+        to {
+          stroke-dashoffset: -10;
+        }
+      }
+      .pulse {
+          animation: pulse 2s ease-in-out infinite;
+      }
+      @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.6; }
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#0ea5e9', // sky-500
+              'secondary': '#64748b', // slate-500
+              'background': '#0f172a', // slate-900
+              'surface': '#1e293b', // slate-800
+              'on-surface': '#e2e8f0', // slate-200
+              'on-primary': '#ffffff',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: 0, transform: 'translateY(10px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "d3": "https://esm.sh/d3@^7.9.0",
+    "leaflet": "https://esm.sh/leaflet@1.9.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.9.0",
+    "d3-selection": "https://esm.sh/d3-selection@^3.0.0",
+    "d3-force": "https://esm.sh/d3-force@^3.0.0",
+    "d3-shape": "https://esm.sh/d3-shape@^3.2.0",
+    "d3-scale": "https://esm.sh/d3-scale@^4.0.2",
+    "d3-scale-chromatic": "https://esm.sh/d3-scale-chromatic@^3.1.0",
+    "d3-zoom": "https://esm.sh/d3-zoom@^3.0.0",
+    "d3-drag": "https://esm.sh/d3-drag@^3.0.0",
+    "d3-polygon": "https://esm.sh/d3-polygon@^3.0.1",
+    "d3-ease": "https://esm.sh/d3-ease@^3.0.1",
+    "d3-transition": "https://esm.sh/d3-transition@^3.0.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-background">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
