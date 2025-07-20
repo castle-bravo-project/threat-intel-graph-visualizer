@@ -90,11 +90,15 @@ Use conventional commits format:
 
 By contributing, you agree that your contributions will be licensed under the MIT License.
 
+## 🔗 Related Projects
+
+- **[Enhanced RIR Parser](https://github.com/castle-bravo-project/enhanced-rir-parser)**: Generate accurate JSON GeoIP data for enhanced geographic visualization
+
 ## 🙋‍♀️ Questions?
 
 Feel free to ask questions in [GitHub Discussions](https://github.com/castle-bravo-project/threat-intel-graph-visualizer/discussions) or open an issue for clarification.
 
 ---
 
-**Castle Bravo Project**  
+**Castle Bravo Project**
 *Open Code. Open Defense. Open Future.*

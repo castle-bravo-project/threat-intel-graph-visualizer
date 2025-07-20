@@ -86,6 +86,16 @@ GEMINI_API_KEY=your_api_key_here
 3. Get your key from [Google AI Studio](https://aistudio.google.com/app/apikey)
 4. Enter your key - it's stored locally and never sent to our servers
 
+### 🌍 GeoIP Data Setup (Optional)
+
+For enhanced geographic visualization with accurate IP location data:
+
+1. **Generate GeoIP Data**: Use the [Enhanced RIR Parser](https://github.com/castle-bravo-project/enhanced-rir-parser) to create JSON GeoIP data
+2. **Upload to App**: Use the "Upload GeoIP Data" button in the application
+3. **Enhanced Mapping**: Get precise geographic locations for IP addresses in your threat data
+
+The Enhanced RIR Parser processes Regional Internet Registry (RIR) data to create comprehensive IP geolocation databases in JSON format compatible with this visualizer.
+
 ## 📖 Usage Guide
 
 ### 🎯 Getting Started
@@ -108,12 +118,24 @@ GEMINI_API_KEY=your_api_key_here
 3. **Clustering** → Group related activities
 4. **Enrichment** → Get detailed IOC intelligence
 
+#### Enhanced Geographic Analysis
+1. **Generate GeoIP Data** → Use [Enhanced RIR Parser](https://github.com/castle-bravo-project/enhanced-rir-parser) to create accurate IP location data
+2. **Upload GeoIP File** → Import your JSON GeoIP data into the application
+3. **Enable Geolocation** → Toggle geolocation enrichment in the options
+4. **Explore Map View** → Visualize threat geography with precise IP locations
+
+**Benefits of Custom GeoIP Data:**
+- **Accuracy**: More precise than default geolocation services
+- **Privacy**: No external API calls for IP lookups
+- **Performance**: Faster local lookups
+- **Customization**: Tailor data sources to your needs
+
 ### 📊 View Modes
 
 | View | Description | Requirements |
 |------|-------------|--------------|
 | **Graph** | Interactive network visualization | None |
-| **Map** | Geographic IP distribution | GeoIP data |
+| **Map** | Geographic IP distribution | GeoIP data ([Enhanced RIR Parser](https://github.com/castle-bravo-project/enhanced-rir-parser)) |
 | **Threat** | Key indicators focus | AI Analysis |
 | **ATT&CK** | MITRE framework mapping | AI Analysis |
 | **Campaign** | Multi-stage attack view | AI Analysis |
@@ -205,7 +227,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **MITRE ATT&CK**: For the cybersecurity framework
 - **Google Gemini**: For AI-powered analysis capabilities
 - **D3.js Community**: For powerful visualization tools
+- **Enhanced RIR Parser**: For accurate GeoIP data generation ([GitHub](https://github.com/castle-bravo-project/enhanced-rir-parser))
 - **Open Source Community**: For the amazing libraries and tools
+
+## 🔗 Related Projects
+
+- **[Enhanced RIR Parser](https://github.com/castle-bravo-project/enhanced-rir-parser)**: Generate accurate JSON GeoIP data from Regional Internet Registry sources for enhanced geographic visualization
 
 ## 📞 Support
 
